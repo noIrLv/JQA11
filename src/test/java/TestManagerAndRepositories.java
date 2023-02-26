@@ -79,6 +79,13 @@ public class TestManagerAndRepositories {
 
      Assertions.assertArrayEquals(expected, actual);
  }
+ @Test
+    public void shouldFindByNameIfExist(){
+        ProductRepository repo = new ProductRepository();
+        repo.save(product1);
+        String nameToFind = "1984";
+
+ }
 }
 
 
