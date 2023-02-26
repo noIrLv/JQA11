@@ -1,6 +1,6 @@
 package netology.ru;
 
-public class Smartphone extends Product{
+public class Smartphone extends Product {
     private String vendor;
 
     public Smartphone(int id, String name, int price, String vendor) {
@@ -14,5 +14,13 @@ public class Smartphone extends Product{
 
     public void setVendor(String vendor) {
         this.vendor = vendor;
+    }
+
+    @Override
+    public boolean matches(String search) {
+        if (super.matches(search)) {
+            return true;
+        }
+        return vendor.equalsIgnoreCase(search);
     }
 }
